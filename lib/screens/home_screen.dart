@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'detail_screen.dart';
 import 'settings_screen.dart';
 
+import 'api_screen.dart';
+import 'notification_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
 
@@ -123,3 +126,62 @@ class HomeScreen extends StatelessWidget {
  }
 
 }
+
+Column(
+
+children:[
+
+
+ElevatedButton(
+
+onPressed:(){
+
+Navigator.push(
+
+context,
+
+MaterialPageRoute(
+
+builder:(context)=>const ApiScreen()
+
+)
+
+);
+
+},
+
+child:
+
+const Text("View API Data")
+
+),
+
+
+
+ElevatedButton(
+
+onPressed:(){
+
+Navigator.push(
+
+context,
+
+MaterialPageRoute(
+
+builder:(context)=>NotificationScreen()
+
+)
+
+);
+
+},
+
+child:
+
+const Text("Notifications")
+
+)
+
+]
+
+)
